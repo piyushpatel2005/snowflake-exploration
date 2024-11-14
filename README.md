@@ -3,9 +3,10 @@
 This repository provides lessons for Snowflake.
 
 ## Basic Concepts
-- [Introduction](notes/introduction/index.md)
+- [Introduction](notes/snowflake/introduction/index.md)
 
 
 
 ## Data Engineering
-- [First Pipeline](notes/first-pipeline/index.md)
+- [First Pipeline](notes/snowflake/first-pipeline/index.md)
+- [Data Staging](notes/snowflake/data-staging/index.md)
