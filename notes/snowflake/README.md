@@ -9,7 +9,12 @@ This repository provides lessons for Snowflake.
 ## Basic Concepts
 - [Introduction](introduction/index.md)
 - [Set up Account](set-up-account/index.md)
-- [Creating Data Warehouse](creating-data-warehouse/index.md)
+- [Snowflake Editions & Pricing](editions-and-pricing/index.md)
+- [Managing Warehouse](managing-warehouse/index.md)
+- [Database Objects](database-objects/index.md)
+- [Loading Data](loading-data/index.md)
+- [Cost Management & Monitoring](usage-monitoring/index.md)
+- [Account Management](account-management/index.md)
 
 
 
