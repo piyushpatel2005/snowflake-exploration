@@ -66,3 +66,39 @@ LIST @PUBLIC_STAGE;
 
 ## Copying Data from Stage
 
+In order to load the data, you need to create the table first.
+
+```sql
+CREATE OR REPLACE TABLE CUSTOMER
+(
+    CUSTOMER_ID INT,
+    CUSTOMER_NAME VARCHAR(100),
+    CUSTOMER_EMAIL VARCHAR(100)
+);
+```
+
+Next, you can simply use `COPY INTO` command to copy data from the stage to the table. You can also provide various configuration options to the `COPY INTO` command.
+
+```sql
+COPY INTO CUSTOMER
+    FROM @EXTERNAL_DB.EXTERNAL_STAGES.AWS_STAGE
+    FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"', SKIP_HEADER = 1, FIELD_DELIMITER = ',');
+```
+
+If there are more than one files in the stage location and some of them are not matching the file format, you can specify the file name pattern to load only the files that match the pattern.
+
+```sql
+COPY INTO CUSTOMER
+    FROM @EXTERNAL_DB.EXTERNAL_STAGES.AWS_STAGE
+    FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"', SKIP_HEADER = 1, FIELD_DELIMITER = ',')
+    PATTERN = '.*\.csv';
+```
+
+If you need to copy data from a specific file, you can specify the file name.
+
+```sql
+COPY INTO CUSTOMER
+    FROM @EXTERNAL_DB.EXTERNAL_STAGES.AWS_STAGE
+    FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"', SKIP_HEADER = 1, FIELD_DELIMITER = ',')
+    files=('file1.csv', 'file2.csv');
+```

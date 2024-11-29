@@ -16,6 +16,7 @@ This repository provides lessons for Snowflake.
 - [Cost Management & Monitoring](usage-monitoring/index.md)
 - [Account Management](account-management/index.md)
 - [Stage](stage/index.md)
+- [Data Transformation](data-transformation/index.md)
 
 
 
