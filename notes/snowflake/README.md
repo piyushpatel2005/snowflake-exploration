@@ -17,6 +17,9 @@ This repository provides lessons for Snowflake.
 - [Account Management](account-management/index.md)
 - [Stage](stage/index.md)
 - [Data Transformation](data-transformation/index.md)
+- [File Format Object](file-formats/index.md)
+- [Copy Command Options](copy-command-options/index.md)
+- [Loading JSON Data](loading-json-data/index.md)
 
 
 

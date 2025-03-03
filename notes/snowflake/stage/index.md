@@ -91,7 +91,7 @@ If there are more than one files in the stage location and some of them are not 
 COPY INTO CUSTOMER
     FROM @EXTERNAL_DB.EXTERNAL_STAGES.AWS_STAGE
     FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"', SKIP_HEADER = 1, FIELD_DELIMITER = ',')
-    PATTERN = '.*\.csv';
+    PATTERN = '.*.csv';
 ```
 
 If you need to copy data from a specific file, you can specify the file name.
@@ -102,3 +102,13 @@ COPY INTO CUSTOMER
     FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"', SKIP_HEADER = 1, FIELD_DELIMITER = ',')
     files=('file1.csv', 'file2.csv');
 ```
+
+This command will display how many rows were parsed, loaded and if there was any error. Next,  you can verify the 
+loaded data.
+
+```sql
+SELECT * FROM CUSTOMER;
+```
+
+The files that have been loaded into a table will not be loaded again. If you want to reload the table, you will 
+have to recreate the table and reload the data.
