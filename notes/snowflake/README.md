@@ -20,6 +20,7 @@ This repository provides lessons for Snowflake.
 - [File Format Object](file-formats/index.md)
 - [Copy Command Options](copy-command-options/index.md)
 - [Loading JSON Data](loading-json-data/index.md)
+- [Working with PARQUET](working-with-parquet/index.md)
 
 
 
