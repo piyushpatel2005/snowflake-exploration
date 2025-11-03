@@ -50,4 +50,14 @@ root/
   `target_path` variable in `dbt_project.yml` file.
 - **.gitignore**: This file is used to ignore files and directories that you don't want to commit to your git 
   repository.
+
+## `dbt_project.yml` Configurations
+
+The `dbt_project.yml` acts as a central configuration file for your DBT project. Here are some of the most important 
+configurations you will find in this file.
+
+- `name`: (Mandatory) The name of the dbt project.
+- `version`: (Mandatory) The version of the dbt project.
+- `config-version`: (Mandatory) Version 2 is the latest version.
+- `profile`: (Mandatory) Profile is used to connect to your data platform.
 - 
